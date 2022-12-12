@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Righteous", cursive;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(183, 227, 255);
+}
+
+body h1 {
+  font-size: 3rem;
+}
+
+#title {
+  margin-top: 40px;
+}
+
+.buttons_container {
+  height: 60px;
+  width: 90vw;
+  margin: 30px 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+.buttons_container .btn {
+  width: 50px;
+  height: 40px;
+  border: none;
+  background-color: rgb(208, 208, 208);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.buttons_container .btn:hover {
+  box-shadow: 2px 2px 5px black;
+}
+
+.buttons_container .btn:active {
+  transform: scale(90%);
+}
+
+.cards_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 178px;
+  height: 300px;
+  padding: 15px 5px;
+  font-size: 0.73rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.553);
+  background-color: white;
+  border-radius: 6px;
+}
+
+.card img {
+  height: 95px;
+  margin: 0 auto 10px;
+  border-radius: 3px;
+}
+
+.nuova {
+  background-color: black;
+}
