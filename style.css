@@ -11,7 +11,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(183, 227, 255);
+  background-image: url(https://i.pinimg.com/originals/32/b8/77/32b877ed4aa7778cc7d43ebb7d95a6f1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.scrollBlock {
+  overflow-y: hidden;
 }
 
 body h1 {
@@ -30,16 +36,17 @@ body h1 {
   align-items: center;
   justify-content: space-evenly;
   background-color: rgb(255, 255, 255);
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 .buttons_container .btn {
   width: 50px;
   height: 40px;
   border: none;
-  background-color: rgb(208, 208, 208);
-  border-radius: 100px;
+  background-image: url(https://i.pinimg.com/originals/32/b8/77/32b877ed4aa7778cc7d43ebb7d95a6f1.png);
+  border-radius: 50px;
   cursor: pointer;
+  color: white;
 }
 
 .buttons_container .btn:hover {
@@ -50,34 +57,175 @@ body h1 {
   transform: scale(90%);
 }
 
+.add_form {
+  display: none;
+}
+
+.show_form {
+  border: 2px solid;
+  background: radial-gradient(#afc3ffe2, #7883ffeb);
+  height: 100vh;
+  width: 100vw;
+  padding: 40vh 50px 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add_form input {
+  height: 25px;
+  width: 55vw;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+.add_form_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add_form_buttons .btn {
+  width: 70px;
+  height: 25px;
+  border: none;
+  background-image: url(https://i.pinimg.com/originals/32/b8/77/32b877ed4aa7778cc7d43ebb7d95a6f1.png);
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+}
+
 .cards_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  width: 100%;
+  width: 95vw;
   padding: 5px;
 }
 
 .card {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  width: 178px;
-  height: 300px;
-  padding: 15px 5px;
-  font-size: 0.73rem;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.553);
-  background-color: white;
-  border-radius: 6px;
+  gap: 10px;
+  width: 320px;
+  padding: 10px 15px;
+  font-size: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.171);
+  border-radius: 10px;
 }
 
 .card img {
-  height: 95px;
-  margin: 0 auto 10px;
-  border-radius: 3px;
+  height: 70px;
+  border-radius: 100px;
 }
 
-.nuova {
-  background-color: black;
+.new_contacts_list {
+  margin-bottom: 20px;
+}
+
+.infoDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 3px;
+  height: 50px;
+  width: 210px;
+}
+
+.moreInfoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.moreInfoBtn,
+.deleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.moreInfoBtn:hover {
+  transform: scale(120%);
+}
+
+.moreInfoBtn:active {
+  transform: scale(100%);
+}
+
+/* ----------Filtri per la modale---------- */
+.hideInfo {
+  display: none;
+}
+
+.moreInfoModal {
+  display: none;
+}
+
+.showModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 3px;
+  height: 50px;
+  width: 220px;
+  background-color: rgba(255, 255, 255, 0.378);
+  border-radius: 10px;
+}
+/* ----------Filtri per la modale---------- */
+
+/* ----------Media Queries---------- */
+@media only screen and (min-width: 768px) {
+  body h1 {
+    font-size: 4rem;
+  }
+
+  .buttons_container {
+    width: 90vw;
+    margin: 30px 0 20px 0;
+  }
+
+  .buttons_container .btn {
+    width: 70px;
+    font-size: 15px;
+  }
+
+  .cards_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 90vw;
+    padding: 5px;
+  }
+
+  .card {
+    width: 335px;
+    font-size: 0.78rem;
+  }
+
+  .card img {
+    height: 75px;
+  }
+
+  .showModal {
+    padding: 0 5px;
+    height: 65px;
+    width: 225px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .buttons_container {
+    margin: 30px 0 20px 0;
+  }
 }
