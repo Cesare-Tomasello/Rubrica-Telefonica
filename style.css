@@ -198,6 +198,12 @@ body h1 {
     font-size: 15px;
   }
 
+  .add_form input {
+    height: 35px;
+    width: 40vw;
+    padding: 10px 0 10px 20px;
+  }
+
   .cards_container {
     display: flex;
     flex-direction: row;
@@ -227,5 +233,11 @@ body h1 {
 @media only screen and (min-width: 1280px) {
   .buttons_container {
     margin: 30px 0 20px 0;
+  }
+
+  .add_form input {
+    height: 35px;
+    width: 30vw;
+    padding: 10px 0 10px 20px;
   }
 }
