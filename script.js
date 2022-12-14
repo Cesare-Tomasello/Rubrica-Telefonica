@@ -39,6 +39,7 @@ const arrayMZ = [
 save_form.addEventListener("click", () => {
   const data = {
     nome: add_form.nome.value,
+    cognome: add_form.cognome.value,
     numero: add_form.numero.value,
     email: add_form.email.value,
     indirizzo: add_form.indirizzo.value,
@@ -251,7 +252,7 @@ const new_card = (data) => {
   moreInfoDiv.classList.add("moreInfoDiv");
 
   const image = document.createElement("img");
-  const name = document.createElement("h4");
+  const complete_name = document.createElement("h4");
   const number = document.createElement("h4");
   const moreInfoBtn = document.createElement("i");
   const mail = document.createElement("h4");
@@ -269,7 +270,7 @@ const new_card = (data) => {
     image.src = elseImg;
   }
 
-  name.textContent = "🆔 " + data.nome;
+  complete_name.textContent = "🆔 " + data.nome + " " + data.cognome;
   number.textContent = "📞 " + data.numero;
   mail.textContent = "✉️ " + data.email;
   address.textContent = "🏠 " + data.indirizzo;
@@ -277,7 +278,7 @@ const new_card = (data) => {
 
   moreInfoModal.append(mail, address);
   moreInfoDiv.append(moreInfoBtn, deleteBtn);
-  infoDiv.append(name, number);
+  infoDiv.append(complete_name, number);
   card.append(image, infoDiv, moreInfoModal, moreInfoDiv);
   cards_container.append(card);
 
